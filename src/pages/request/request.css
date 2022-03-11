@@ -5,17 +5,45 @@
     position: fixed;
     background-image: url('./img/tallTree.png');
 }
+
+.t {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    background-color: #F5F4D6 ;
+    height: 80%;
+    white-space:pre-line;
+    border-radius: 20px;
+    line-height: 18px;
+    padding-left: 20px;
+    font-size: 1.2em;
+    color: #6F6859;
+    font-weight: bold;
+}
+
+.gobtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 3em;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+    background-color: #6F9672;
+    color: white;
+    border-radius: 10%;
+}
 .center-re{
     position: fixed;
-    top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 30%;
+    bottom: 10vh;
+    margin: 0 auto;
+    width: 80%;
     background-color: #F5F4D6 ;
-    height: 70%;
-
+    height: 40%;
     border-radius: 20px;
 }
 .text-re{
@@ -23,33 +51,33 @@
     height: 20%;
     margin: 0 auto;
     margin-top: 20%;
-    text-align: center;
     font-size: x-large;
     font-weight: bolder;
     color: #6F6859;
 }
 .xuanze{
     display: flex;
-    height: 130px;
+    justify-content: center;
+    height: 85px;
     margin-top: 20%;
 }
-.yes{
-    border-radius: 45%;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: larger;
-    background-color:#6F9672 ;
-    width: 20%;
-    margin-left: 20%;
-    line-height: 130px;
+
+.btn {
+    position: relative;
+    height: 100%;
+    width: 40%;
+    background: url("./img/button.png");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
-.no{
-    width: 20%;
-    border-radius: 45%;
-    text-align: center;
-    color: #FFFFFF;
-    font-size: larger;
-    background-color: #6F9672;
-    margin-left: 20%;
-    line-height: 130px;
+
+.btn p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.3em;
+    margin: 0;
+    padding: 0;
 }

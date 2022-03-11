@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import "./login.css";
 import Service from "../../common/service";
 

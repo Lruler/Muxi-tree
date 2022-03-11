@@ -1,19 +1,25 @@
-.body-t{
+.page {
+    position: relative;
     background-color: #6F9672;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.body-t{
+    position: absolute;
+    bottom: -5vh;
     background-image: url('./img/tree.png');
-    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
     height: 100%;
-    position: fixed;
-    background-size: 100% 100%;
+    width: 100%;
 }
 .text-t{
-    position: fixed;
-    top: 100px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 30%;
-    height: 20%;
-    font-size: 20pt;
+    position: absolute;
+    left: 50%;
+    bottom: 15vh;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    color: #615231;
 }
