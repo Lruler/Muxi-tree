@@ -1,0 +1,55 @@
+.body-re{
+    background-color: #6F9672;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-image: url('./img/tallTree.png');
+}
+.center-re{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 30%;
+    background-color: #F5F4D6 ;
+    height: 70%;
+
+    border-radius: 20px;
+}
+.text-re{
+    width: 80%;
+    height: 20%;
+    margin: 0 auto;
+    margin-top: 20%;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+    color: #6F6859;
+}
+.xuanze{
+    display: flex;
+    height: 130px;
+    margin-top: 20%;
+}
+.yes{
+    border-radius: 45%;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: larger;
+    background-color:#6F9672 ;
+    width: 20%;
+    margin-left: 20%;
+    line-height: 130px;
+}
+.no{
+    width: 20%;
+    border-radius: 45%;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: larger;
+    background-color: #6F9672;
+    margin-left: 20%;
+    line-height: 130px;
+}

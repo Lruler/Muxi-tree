@@ -1,0 +1,19 @@
+.body-t{
+    background-color: #6F9672;
+    background-image: url('./img/tree.png');
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-size: 100% 100%;
+}
+.text-t{
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 30%;
+    height: 20%;
+    font-size: 20pt;
+}
