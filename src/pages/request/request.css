@@ -21,6 +21,7 @@
     font-size: 1.2em;
     color: #6F6859;
     font-weight: bold;
+    overflow: scroll;
 }
 
 .gobtn {

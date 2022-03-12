@@ -11,8 +11,17 @@ class Login extends Component {
     this.state = {
       username: "",
       pwd: "",
-      user:null
+      user: null,
+      isPc: false,
     };
+  }
+
+  componentDidMount() {
+    const width = document.body.offsetWidth;
+    if (width > 700) {
+      alert('用手机打开浏览获得更良好体验！')
+      this.setState({ isPc: true });
+    }
   }
 
   changeUsername(e) {
@@ -30,7 +39,6 @@ class Login extends Component {
     if (username && pwd) {
       Service.Login(username, pwd).then((res) => {
         if (res && res.code == 200) {
-          console.log(res)
           localStorage.setItem("id", username);
           localStorage.setItem("token",res.data)
           this.setState({
@@ -43,25 +51,30 @@ class Login extends Component {
   render() {
     return (
       <div className="body">
-          {this.state.user && (
-              <Navigate to='/request' replace = 'true' />
-          )}
-        <div className="centent">
-          <input
-            className="username"
-            placeholder="请输入学号"
-            onChange={this.changeUsername.bind(this)}
-          ></input>
-          <input
-            className="pwd"
-            type="password"
-            placeholder="请输入密码"
-            onChange={this.changePwd.bind(this)}
-          ></input>
-          <div className="denglu" onClick={this.Login.bind(this)}>
-            学号登录
-          </div>
-        </div>
+        {this.state.isPc ? (
+          "请用手机打开获得更良好体验哦！"
+        ) : (
+          <>
+            {" "}
+            {this.state.user && <Navigate to="/request" replace="true" />}
+            <div className="centent">
+              <input
+                className="username"
+                placeholder="请输入学号"
+                onChange={this.changeUsername.bind(this)}
+              ></input>
+              <input
+                className="pwd"
+                type="password"
+                placeholder="请输入密码"
+                onChange={this.changePwd.bind(this)}
+              ></input>
+              <div className="denglu" onClick={this.Login.bind(this)}>
+                学号登录
+              </div>
+            </div>
+          </>
+        )}
       </div>
     );
   }

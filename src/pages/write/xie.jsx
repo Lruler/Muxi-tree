@@ -27,12 +27,22 @@ class Xie extends Component {
       });
     });
   }
+
+  getNowTime() {
+    let dateTime;
+    let yy = new Date().getFullYear();
+    let mm = new Date().getMonth() + 1;
+    let dd = new Date().getDate();
+    dateTime = yy + "年" + mm + "月" + dd + "日";
+    return dateTime;
+  }
+
   render() {
     return (
       <div className="body-x">
         {this.state.user && <Navigate to="/tree" replace="true" />}
         <div className="center-x">
-          <div className="jiTime">寄信时间:2022.3月12日</div>
+          <div className="jiTime">寄信时间:{this.getNowTime()}</div>
           <div className="jiName">寄信人：{localStorage.getItem("id")}</div>
           <div className="div-ct">
             <div className="div"></div>
@@ -46,7 +56,9 @@ class Xie extends Component {
             onChange={this.chagedata.bind(this)}
           ></textarea>
           <img src={log} className="log"></img>
-          <div className="submit" onClick={this.tijiao.bind(this)}>寄出信件</div>
+          <div className="submit" onClick={this.tijiao.bind(this)}>
+            寄出信件
+          </div>
         </div>
       </div>
     );
