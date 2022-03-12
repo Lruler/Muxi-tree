@@ -44,8 +44,12 @@ class Login extends Component {
           this.setState({
               user:res.data
           })
+        } else {
+          alert('密码或用户名错误!')
         }
-      });
+      }).catch(() => {
+        alert('服务端错误')
+      })
     }
   }
   render() {
@@ -55,7 +59,6 @@ class Login extends Component {
           "请用手机打开获得更良好体验哦！"
         ) : (
           <>
-            {" "}
             {this.state.user && <Navigate to="/request" replace="true" />}
             <div className="centent">
               <input
